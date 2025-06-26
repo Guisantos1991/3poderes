@@ -4,19 +4,6 @@
 @import "tailwindcss";
 
 
-html {
-  margin: 0;
-  padding: 0;
-  background-color: #F3F3F3;
-}
-
-/* Responsividade básica */
-@media (max-width: 640px) {
-  body {
-    @apply text-base;
-  }
-}
-
 :root {
   @theme {
   --font-daysOne: 'Days One', sans-serif;
@@ -24,4 +11,15 @@ html {
   --color-primary: #FF0000;
   --color-secondary: #FFF212;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  @apply min-h-screen bg-blue-50 text-black antialiased;
+  margin: 0;
+  scrpoll-behavior: smooth;
 }
