@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@import "tailwindcss";
+
+
+html {
+
+  margin: 0;
+  padding: 0;
+  background-color: #F3F3F3;
+  
+
+}
+
+
+/* Responsividade básica */
+@media (max-width: 640px) {
+  body {
+    @apply text-base;
+  }
+}
+
+@theme {
+  --font-daysOne: 'Days One', sans-serif;
+  --font-dmSans: 'DM Sans', sans-serif;
+  --color-primary: #FF0000;
+  --color-secondary: #FFF212;
+}
