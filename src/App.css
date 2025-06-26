@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+@media (max-width: 1200px) {
+  .main-service-card {
+    width: 24rem !important; /* w-96 */
+    height: 24rem !important; /* h-96 */
+    left: -2rem !important; /* ajuste para -left-8 */
+    margin-top: 6rem !important; /* ajuste se necessário */
+  }
+}

@@ -22,64 +22,73 @@ export default function MainService() {
 
   return (
     <motion.div ref={ref} style={{ y }}>
-      <div className="flex flex-col items-center justify-center w-full h-220 p-10">
+      <div className="flex flex-col items-center justify-center w-full h-176 p-8">
         <div className="flex w-full h-full flex-row justify-end items-center">
           <div
-            className="flex flex-col items-center justify-center w-5/6 h-full relative bg-no-repeat bg-center"
-            style={{
-              backgroundImage: "url('/images/headerBanner.jpeg')",
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-            }}
+            className="flex flex-col items-center justify-center w-4/5 h-full relative"
+            id="main-service"
           >
-            <div className="flex flex-col items-center justify-center w-120 h-120 absolute -left-30 top-10 z-10 gap-2 bg-white rounded-lg shadow-md mt-40">
-              <div className="flex flex-row items-center justify-start w-full h-16 ml-4 gap-2">
-                <Separator className="w-6 h-4" />
-                <h1 className="font-daysOne text-base text-red-500 gap-2">
+            {/* Vídeo de fundo */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-lg"
+              style={{ pointerEvents: "none" }}
+            >
+              <source src="/videos/mainVideo.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo em HTML5.
+            </video>
+            <div className="flex flex-col items-center justify-center w-96 h-96 absolute -left-50 top-8 z-10 gap-1 bg-white rounded-lg shadow-md mt-24 main-service-card"
+            >
+              <div className="flex flex-row items-center justify-start w-full h-10 ml-2 gap-1">
+                <Separator className="w-5 h-3" />
+                <h1 className="font-daysOne text-sm text-red-500 gap-1">
                   Com o melhor atendimento!
                 </h1>
               </div>
-              <div className="flex flex-col items-start justify-center w-full h-80 gap-4 ml-4">
-                <h1 className="font-daysOne text-2xl text-black">
+              <div className="flex flex-col items-start justify-center w-full h-64 gap-2 ml-2">
+                <h1 className="font-daysOne text-lg text-black">
                   Com uma equipe qualificada, comprometida e experiente!
                 </h1>
-                <p className="font-dmSans text-base text-black">
+                <p className="font-dmSans text-xs text-black">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quisquam, quos lorem ipsum dolor sit amet consectetur
                   adipisicing elit. Quisquam, quos.
                 </p>
-                <div className="flex flex-row items-center justify-start w-full h-2 gap-2 mt-6">
+                <div className="flex flex-row items-center justify-start w-full h-2 gap-1 mt-3">
                   <Disc className="w-3 h-3" />
-                  <p className="font-dmSans text-sm text-black">
+                  <p className="font-dmSans text-xs text-black">
                     Duas unidades.
                   </p>
                 </div>
-                <div className="flex flex-row items-center justify-start w-full h-2 gap-2">
+                <div className="flex flex-row items-center justify-start w-full h-2 gap-1">
                   <Disc className="w-3 h-3" />
-                  <p className="font-dmSans text-sm text-black">
+                  <p className="font-dmSans text-xs text-black">
                     Equipamentos de alta qualidade.
                   </p>
                 </div>
-                <div className="flex flex-row items-center justify-start w-full h-2 gap-2">
+                <div className="flex flex-row items-center justify-start w-full h-2 gap-1">
                   <Disc className="w-3 h-3" />
-                  <p className="font-dmSans text-sm text-black">
+                  <p className="font-dmSans text-xs text-black">
                     Peças e acessórios.
                   </p>
                 </div>
-                <div className="flex flex-row items-center justify-start w-full h-2 gap-2">
+                <div className="flex flex-row items-center justify-start w-full h-2 gap-1">
                   <Disc className="w-3 h-3" />
-                  <p className="font-dmSans text-sm text-black">
+                  <p className="font-dmSans text-xs text-black">
                     Prazo diferenciado.
                   </p>
                 </div>
               </div>
               <div
-                className={`flex flex-col items-center justify-center w-full h-16 mt-4 ${
+                className={`flex flex-col items-center justify-center w-full h-10 mt-2 ${
                   isRed700 ? "bg-red-700" : "bg-red-500"
                 }`}
                 id="venha-conferir"
               >
-                <h1 className="font-daysOne text-2xl text-white">
+                <h1 className="font-daysOne text-lg text-white">
                   VENHA CONFERIR
                 </h1>
               </div>
