@@ -3,8 +3,8 @@ import MidSection from "./components/MidSection"
 import MainService from "./components/MainService"
 import AboutUs from "./components/AboutUs"
 import Contact from "./components/Contact"
+import Footer from "./components/Footer"
 import { useEffect } from "react"
-
 
 export default function App() {
   useEffect(() => {
@@ -14,12 +14,13 @@ export default function App() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div className="flex flex-col gap-2">
       <Header />
       <MidSection />
       <MainService />
       <AboutUs />
       <Contact />
-    </>
+      <Footer />
+    </div>
   )
 }

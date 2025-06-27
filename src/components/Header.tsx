@@ -24,61 +24,60 @@ export default function Header() {
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="top-0 left-0 w-full h-[750px] bg-primary shadow-md z-50 flex flex-col justify-center items-center"
+      className="top-0 left-0 w-full min-h-[500px] md:h-[750px] bg-primary shadow-md z-50 flex flex-col justify-center items-center"
     >
       <div
-        className="flex h-5/6 w-full bg-cover bg-center bg-no-repeat justify-center items-center"
+        className="flex flex-col md:flex-row h-auto md:h-5/6 w-full bg-cover bg-center bg-no-repeat justify-center items-center"
         style={{ backgroundImage: "url('/images/hdBanner.jpg')" }}
       >
-        <div className="flex flex-row items-center h-5/6 w-full">
-          <div className="flex w-5/6 h-full flex-col justify-center items-center">
-            <div className="flex flex-col w-[580px] gap-4">
-              <h1 className="font-daysOne text-white text-6xl w-96">
+        <div className="flex flex-col md:flex-row items-center h-auto md:h-5/6 w-full">
+          <div className="flex w-full md:w-5/6 h-full flex-col justify-center items-center px-4 md:px-0 py-8 md:py-0">
+            <div className="flex flex-col w-full md:w-[580px] gap-4">
+              <h1 className="font-daysOne text-white text-3xl sm:text-4xl md:text-6xl w-full md:w-96 text-center md:text-left">
                 Experiência e Qualidade
               </h1>
               <div className="flex flex-col w-full bg-gray-600/40 rounded-lg p-2">
-                <span className="font-dmSans text-white text-1xl">
+                <span className="font-dmSans text-white text-base md:text-1xl">
                   Nós da <b>3 Poderes</b>, oferecemos a você o que há de melhor
                   no mercado, sobre mão de obra, peças e atendimento. Venha
                   tomar um café e conhecer nossa equipe.
                 </span>
               </div>
-
               <div className="flex flex-col w-full gap-4 mt-4">
-                <div className="flex flex-row h-12 justify- items-center">
-                  <div className="px-5 py-3.5 bg-secondary inline-flex justify-start items-center">
+                <div className="flex flex-row h-12 items-center gap-2">
+                  <div className="px-3 py-2 md:px-5 md:py-3.5 bg-secondary inline-flex justify-start items-center">
                     <a
                       href="https://wa.me/5534996441060"
-                      className="text-center justify-center text-black text-base font-normal font-['Days_One'] uppercase tracking-tight hover:cursor-pointer"
+                      className="text-center justify-center text-black text-sm md:text-base font-normal font-['Days_One'] uppercase tracking-tight hover:cursor-pointer"
                     >
                       Agendar Canaã
                     </a>
                   </div>
                   <a
                     href="https://wa.me/5534996441060"
-                    className="flex justify w-14 h-8 justify-center items-center"
+                    className="flex w-10 h-10 md:w-14 md:h-8 justify-center items-center"
                   >
                     <ContactIcon
-                      className="w-8 h-8  hover:cursor-pointer hover:scale-110 transition-all duration-300 hover:bg-gray-600/60 rounded-full hover:p-1 hover:w-12 hover:h-12 hover:ml-1"
+                      className="w-8 h-8 hover:cursor-pointer hover:scale-110 transition-all duration-300 hover:bg-gray-600/60 rounded-full hover:p-1 hover:w-10 hover:h-10 md:hover:w-12 md:hover:h-12 hover:ml-1"
                       style={{ fill: "white" }}
                     />
                   </a>
                 </div>
-                <div className="flex flex-row h-12 justify- items-center">
-                  <div className="px-5 py-3.5 bg-secondary inline-flex justify-start items-center">
+                <div className="flex flex-row h-12 items-center gap-2">
+                  <div className="px-3 py-2 md:px-5 md:py-3.5 bg-secondary inline-flex justify-start items-center">
                     <a
                       href="https://wa.me/5534999666729"
-                      className="text-center justify-center text-black text-base font-normal font-['Days_One'] uppercase tracking-tight hover:cursor-pointer"
+                      className="text-center justify-center text-black text-sm md:text-base font-normal font-['Days_One'] uppercase tracking-tight hover:cursor-pointer"
                     >
-                      Agendar Tubalina
+                      Agendar Chs. Tubalina
                     </a>
                   </div>
                   <a
                     href="https://wa.me/5534999666729"
-                    className="flex justify w-14 h-8 justify-center items-center"
+                    className="flex w-10 h-10 md:w-14 md:h-8 justify-center items-center"
                   >
                     <ContactIcon
-                      className="w-8 h-8  hover:cursor-pointer hover:scale-110 transition-all duration-300 hover:bg-gray-600/60 rounded-full hover:p-1 hover:w-12 hover:h-12 hover:ml-1"
+                      className="w-8 h-8 hover:cursor-pointer hover:scale-110 transition-all duration-300 hover:bg-gray-600/60 rounded-full hover:p-1 hover:w-10 hover:h-10 md:hover:w-12 md:hover:h-12 hover:ml-1"
                       style={{ fill: "white" }}
                     />
                   </a>
@@ -86,11 +85,11 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <div className="flex items-end justify-end w-3/6 h-full tranparent relative">
+          <div className="flex items-center justify-center md:items-end md:justify-end w-full md:w-3/6 h-full relative mt-8 md:mt-0">
             <img
               src="/images/mainLogo.png"
               alt="logo"
-              className="w-[360px] h-[190px] absolute right-10 bottom-[-40px]"
+              className="w-48 h-24 md:w-[360px] md:h-[190px] md:absolute md:right-10 md:bottom-[-40px]"
             />
           </div>
         </div>
@@ -100,21 +99,21 @@ export default function Header() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="flex h-36 w-5/6 flex-row items-center justify-between px-24"
+        className="flex flex-col md:flex-row h-auto md:h-36 w-full md:w-5/6 items-center justify-center md:justify-between px-2 md:px-24 gap-4 md:gap-0 mt-6 md:mt-0"
       >
         <motion.div
           id="best-price"
           animate={active === 0 ? "active" : "inactive"}
           variants={cardVariants}
           transition={{ duration: 0.5 }}
-          className="flex w-96 h-32 flex-row items-center justify-center rounded-lg"
+          className="flex w-1/2 md:w-96 h-20 md:h-32 flex-row items-center justify-center rounded-lg mb-2 md:mb-0"
         >
-          <div className="flex flex-row items-center justify-center w-1/2 h-full">
-            <BestPriceIcon className="w-16 h-16" style={{ fill: "white" }} />
+          <div className="flex flex-row items-center justify-center w-1/3 md:w-1/2 h-full">
+            <BestPriceIcon className="w-10 h-10 md:w-16 md:h-16" style={{ fill: 'white' }} />
           </div>
-          <div className="flex flex-col items-start justify-center  w-full h-full p-1">
-            <h1 className="text-white text-3xl font-daysOne">Melhor Preço</h1>
-            <p className="text-white text-sm font-dmSans">
+          <div className="flex flex-col items-start justify-center w-2/3 md:w-full h-full p-1">
+            <h1 className="text-white text-base md:text-3xl font-daysOne">Melhor Preço</h1>
+            <p className="hidden md:block text-white text-xs md:text-sm font-dmSans">
               Oferecemos o melhor preço do mercado, com a melhor qualidade.
             </p>
           </div>
@@ -124,14 +123,14 @@ export default function Header() {
           animate={active === 1 ? "active" : "inactive"}
           variants={cardVariants}
           transition={{ duration: 0.5 }}
-          className="flex w-96 h-32 flex-row items-center justify-center rounded-lg"
+          className="flex w-1/2 md:w-96 h-20 md:h-32 flex-row items-center justify-center rounded-lg mb-2 md:mb-0"
         >
-          <div className="flex flex-row items-center justify-center w-1/2 h-full">
-            <GuaranteeIcon className="w-16 h-16" style={{ fill: "white" }} />
+          <div className="flex flex-row items-center justify-center w-1/3 md:w-1/2 h-full">
+            <GuaranteeIcon className="w-10 h-10 md:w-16 md:h-16" style={{ fill: 'white' }} />
           </div>
-          <div className="flex flex-col items-start justify-center  w-full h-full p-1">
-            <h1 className="text-white text-3xl font-daysOne">Garantia</h1>
-            <p className="text-white text-sm font-dmSans">
+          <div className="flex flex-col items-start justify-center w-2/3 md:w-full h-full p-1">
+            <h1 className="text-white text-base md:text-3xl font-daysOne">Garantia</h1>
+            <p className="hidden md:block text-white text-xs md:text-sm font-dmSans">
               Trabalhamos com os melhores fornecedores do mercado, garantindo a melhor qualidade.
             </p>
           </div>
@@ -141,14 +140,14 @@ export default function Header() {
           animate={active === 2 ? "active" : "inactive"}
           variants={cardVariants}
           transition={{ duration: 0.5 }}
-          className="flex w-96 h-32 flex-row items-center justify-center rounded-lg"
+          className="flex w-1/2 md:w-96 h-20 md:h-32 flex-row items-center justify-center rounded-lg"
         >
-          <div className="flex flex-row items-center justify-center w-1/2 h-full">
-            <CertifiedIcon className="w-16 h-16" style={{ fill: "white" }} />
+          <div className="flex flex-row items-center justify-center w-1/3 md:w-1/2 h-full">
+            <CertifiedIcon className="w-10 h-10 md:w-16 md:h-16" style={{ fill: 'white' }} />
           </div>
-          <div className="flex flex-col items-start justify-center  w-full h-full p-1">
-            <h1 className="text-white text-3xl font-daysOne">Mão de Obra</h1>
-            <p className="text-white text-sm font-dmSans">
+          <div className="flex flex-col items-start justify-center w-2/3 md:w-full h-full p-1">
+            <h1 className="text-white text-base md:text-3xl font-daysOne">Mão de Obra</h1>
+            <p className="hidden md:block text-white text-xs md:text-sm font-dmSans">
               Com uma mão de obra qualificada, garantimos o melhor resultado.
             </p>
           </div>

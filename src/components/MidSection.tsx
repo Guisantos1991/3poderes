@@ -22,13 +22,13 @@ export default function MidSection() {
 
   return (
     <div className="flex flex-col items-start justify-start w-full h-full">
-      <div className="flex flex-row w-full h-204 p-10 items-center justify-center">
-        <div className="flex flex-col items-start justify-start w-1/2 h-full ">
-          <motion.div className="flex flex-col items-center justify-start w-full h-full p-2 mb-45">
+      <div className="flex flex-col md:flex-row w-full h-auto md:h-204 p-4 md:p-10 items-center justify-center gap-8 md:gap-0">
+        <div className="flex flex-col items-center justify-start w-full md:w-1/2 h-full">
+          <motion.div className="flex flex-col items-center justify-start w-full h-full p-2 mb-8 md:mb-45">
             <img
               src="/images/headerBanner.jpeg"
               alt="Mid Section"
-              className="w-3/4 h-full object-contain"
+              className="w-full md:w-3/4 h-48 md:h-full object-contain rounded-lg shadow-md"
             />
           </motion.div>
         </div>
@@ -36,31 +36,31 @@ export default function MidSection() {
           id="MidSection-Right"
           ref={ref}
           style={{ x, opacity }}
-          className="flex flex-col items-start justify-center w-1/2 h-full p-10 gap-10"
+          className="flex flex-col items-start justify-center w-full md:w-1/2 h-full p-2 md:p-10 gap-4 md:gap-10"
         >
           <div className="flex flex-col items-center justify-start w-full h-full mt-2 p-2 gap-2">
             <div className="flex flex-row items-center justify-center w-full h-8 gap-2">
               <div className="flex flex-col items-center justify-center w-8 h-full">
                 <Separator className="w-6 h-4" />
               </div>
-              <div className="flex items-center justify-start w-full h-full font-dmSans text-xl text-red-500">
+              <div className="flex items-center justify-start w-full h-full font-dmSans text-lg md:text-xl text-red-500">
                 <h1>O que fazemos?</h1>
               </div>
             </div>
-            <div className="flex flex-col items-start justify-center w-full h-52  p-2 gap-8">
-              <h1 className="font-daysOne text-3xl text-black">
+            <div className="flex flex-col items-start justify-center w-full h-auto md:h-52 p-2 gap-4 md:gap-8">
+              <h1 className="font-daysOne text-xl md:text-3xl text-black">
                 Vai viajar? Nós cuidamos de tudo pra você!
               </h1>
-              <p className="font-dmSans text-l text-black">
+              <p className="font-dmSans text-base md:text-lg text-black">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
                 aut libero nobis! Consequuntur odio perferendis iste, fuga
                 quaerat fugiat temporibus iusto ea animi quam nulla corrupti
                 quibusdam tenetur sequi quae!
               </p>
             </div>
-            <div className="flex flex-col items-start justify-center w-full h-full bg-contain bg-no-repeat bg-center rounded-b-lg">
+            <div className="flex flex-col items-start justify-center w-full h-64 md:h-full bg-contain bg-no-repeat bg-center rounded-b-lg">
               <div
-                className="flex w-full h-full rounded-b-lg bg-contain bg-no-repeat bg-start"
+                className="flex w-full h-full rounded-b-lg bg-contain bg-no-repeat bg-start sm:w-1/2 sm:h-full"
                 style={{ backgroundImage: "url('/images/services2.jpeg')" }}
               ></div>
             </div>
@@ -68,48 +68,48 @@ export default function MidSection() {
         </motion.div>
       </div>
       <motion.div
-        className="flex flex-col items-center justify-center w-full h-144  p-6"
+        className="flex flex-col items-center justify-center w-full h-auto md:h-144 p-2 md:p-6 pb-0 mb-0"
         id="midSectionServices"
         ref={servicesRef}
         style={{ y: servicesY, opacity: servicesOpacity }}
       >
-        <div className="flex flex-row w-11/12 h-full">
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <div className="flex w-3/4 h-36 flex-col items-start justify-start">
-              <div className="flex flex-row items-center justify-start w-full h-12 gap-2">
+        <div className="flex flex-col md:flex-row w-full md:w-11/12 h-auto md:h-full gap-4 md:gap-0">
+          <div className="flex flex-col items-center justify-center w-full h-full mb-4 md:mb-0">
+            <div className="flex w-full md:w-3/4 h-20 md:h-36 flex-col items-start justify-start">
+              <div className="flex flex-row items-center justify-start w-full h-8 md:h-12 gap-2">
                 <Separator className="w-6 h-4 " />
-                <h1 className="font-daysOne text-base text-red-500 self-">
+                <h1 className="font-daysOne text-sm md:text-base text-red-500 self-">
                   Como podemos te ajudar?
                 </h1>
               </div>
-              <h1 className="font-daysOne text-3xl text-black">
+              <h1 className="font-daysOne text-xl md:text-3xl text-black">
                 Nossos Serviços
               </h1>
             </div>
-            <div className="flex flex-col items-center justify-center w-3/4 h-5/6">
+            <div className="flex flex-col items-center justify-center w-full md:w-3/4 h-auto md:h-5/6">
               <div className="flex flex-col w-full h-full">
                 <div
-                  className="flex w-full h-5/6 bg-contain bg-no-repeat bg-center"
+                  className="flex w-full h-[45vw] md:h-96 bg-cover bg-no-repeat bg-center"
                   style={{ backgroundImage: "url('/images/services5.png')" }}
                 ></div>
-                <div className="flex w-full h-1/6 items-center justify-center">
-                  <h1 className="font-daysOne text-2xl text-red-500">
+                <div className="flex w-full h-10 md:h-1/6 items-center justify-center">
+                  <h1 className="font-daysOne text-lg md:text-2xl text-red-500">
                     Oléos e Filtros
                   </h1>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center w-full h-full">
-            <div className="flex w-3/4 h-36" />
-            <div className="flex flex-col items-center justify-center w-3/4 h-5/6">
+          <div className="flex flex-col items-center justify-center w-full h-full mb-4 md:mb-0">
+            <div className="flex w-full md:w-3/4 h-20 md:h-36" />
+            <div className="flex flex-col items-center justify-center w-full md:w-3/4 h-auto md:h-5/6">
               <div className="flex flex-col w-full h-full">
                 <div
-                  className="flex w-full h-5/6 bg-contain bg-no-repeat bg-center"
+                  className="flex w-full h-[45vw] md:h-96 bg-cover bg-no-repeat bg-center"
                   style={{ backgroundImage: "url('/images/services7.png')" }}
                 ></div>
-                <div className="flex w-full h-1/6 items-center justify-center">
-                  <h1 className="font-daysOne text-2xl text-red-500">
+                <div className="flex w-full h-10 md:h-1/6 items-center justify-center">
+                  <h1 className="font-daysOne text-lg md:text-2xl text-red-500">
                     Alinhamento e Balanceamento
                   </h1>
                 </div>
@@ -117,15 +117,15 @@ export default function MidSection() {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center w-full h-full">
-            <div className="flex w-3/4 h-36" />
-            <div className="flex flex-col items-center justify-center w-3/4 h-5/6">
+            <div className="flex w-full md:w-3/4 h-20 md:h-36" />
+            <div className="flex flex-col items-center justify-center w-full md:w-3/4 h-auto md:h-5/6">
               <div className="flex flex-col w-full h-full">
                 <div
-                  className="flex w-full h-5/6 bg-contain bg-no-repeat bg-center"
+                  className="flex w-full h-[45vw] md:h-96 bg-cover bg-no-repeat bg-center"
                   style={{ backgroundImage: "url('/images/services6.png')" }}
                 ></div>
-                <div className="flex w-full h-1/6 items-center justify-center">
-                  <h1 className="font-daysOne text-2xl text-red-500">
+                <div className="flex w-full h-10 md:h-1/6 items-center justify-center">
+                  <h1 className="font-daysOne text-lg md:text-2xl text-red-500">
                     Mecânica Geral
                   </h1>
                 </div>
