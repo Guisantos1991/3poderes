@@ -22,13 +22,13 @@ export default function MidSection() {
 
   return (
     <div className="flex flex-col items-start justify-start w-full h-full md:mt-12">
-      <div className="flex flex-col md:flex-row w-full h-auto md:h-160 p-4 md:p-10 items-center justify-center gap-8 md:gap-0">
+      <div className="flex flex-col md:flex-row w-full h-186 md:h-160 p-4 md:p-10 items-center justify-center gap-2 md:gap-0">
         <div className="flex flex-col items-center justify-start w-full md:w-1/2 h-full">
           <motion.div className="flex flex-col items-center justify-start w-full h-full p-2 mb-8 md:mb-45">
             <img
               src="/images/headerBanner.jpeg"
               alt="Mid Section"
-              className="w-full md:w-3/4 h-48 md:h-full object-contain rounded-lg shadow-md"
+              className="w-full md:w-3/4 h-48 md:h-full object-contain rounded-lg shadow-md mt-24"
             />
           </motion.div>
         </div>
