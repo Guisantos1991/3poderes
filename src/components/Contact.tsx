@@ -98,7 +98,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center w-full md:w-120 h-40 sm:h-48 md:h-120 bg-black rounded-lg shadow-md p-2 sm:p-4 md:absolute md:right-[-120px] md:top-1/2 md:-translate-y-1/2 gap-2 sm:gap-6 md:gap-14 mt-2 sm:mt-4 md:mt-0 left-300">
+        <div className="flex flex-col items-center justify-center w-full md:w-120 h-40 sm:h-48 md:h-120 bg-black rounded-lg shadow-md p-2 sm:p-4 md:absolute md:right-[-320px] md:top-1/2 md:-translate-y-1/2 gap-2 sm:gap-6 md:gap-14 mt-2 sm:mt-4 md:mt-0">
           <h1 className="font-daysOne text-red-500 text-xs sm:text-sm md:text-2xl mb-1 sm:mb-2 uppercase text-center">
             Quer saber mais?
           </h1>
