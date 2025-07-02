@@ -1,8 +1,14 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0.5rem;
   text-align: center;
+}
+
+@media (min-width: 640px) {
+  #root {
+    padding: 2rem;
+  }
 }
 
 .logo {
@@ -41,11 +47,5 @@
   color: #888;
 }
 
-@media (max-width: 1200px) {
-  .main-service-card {
-    width: 24rem !important; /* w-96 */
-    height: 24rem !important; /* h-96 */
-    left: -2rem !important; /* ajuste para -left-8 */
-    margin-top: 6rem !important; /* ajuste se necessário */
-  }
-}
+/* Removido uso de !important para melhor controle com Tailwind */
+/* .main-service-card regras removidas */

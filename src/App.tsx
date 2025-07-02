@@ -14,7 +14,7 @@ export default function App() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 sm:gap-6">
       <Header />
       <MidSection />
       <MainService />

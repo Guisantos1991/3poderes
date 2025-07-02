@@ -30,7 +30,7 @@ export default function MainService() {
           >
             {/* Card sobreposto no desktop, acima no mobile */}
             <div
-              className="flex flex-col items-center justify-center w-full sm:w-11/12 max-w-xs sm:max-w-md md:max-w-lg bg-white/90 rounded-lg shadow-lg p-2 sm:p-4 gap-1 sm:gap-2 mb-4 md:w-96 md:h-96 md:absolute md:-left-12 md:top-1/2 md:-translate-y-1/2 md:z-10 main-service-card"
+              className="flex flex-col items-center justify-center w-full sm:w-11/12 max-w-xs sm:max-w-md md:max-w-lg bg-white/90 rounded-lg shadow-lg p-2 sm:p-4 gap-1 sm:gap-2 mb-4 md:w-96 md:h-96 md:absolute md:-left-52 md:top-1/2 md:-translate-y-1/2 md:z-10 main-service-card"
               id="mainServiceCard"
             >
               <div className="flex flex-row items-center justify-start w-full h-10 gap-1">
