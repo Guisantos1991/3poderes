@@ -182,14 +182,14 @@ export default function MidSection() {
                 width: isMobile ? `${services.length * 100}%` : `${(services.length / cardsPerView) * 100}%`,
               }}
             >
-              {services.map((service, idx) => (
+              {services.map((service) => (
                 <div
                   key={service.title}
                   className="flex-shrink-0 w-full md:w-1/4 px-2"
                   style={{ maxWidth: isMobile ? '100%' : '25%' }}
                 >
                   <div className="flex flex-col items-center justify-center bg-white rounded-lg shadow-md p-4 h-full overflow-auto md:h-[450px]">
-                    <div className="w-full h-[38vw] max-h-32 md:h-96 md:max-h-96 bg-cover bg-center rounded mb-4" style={{ backgroundImage: `url('${service.image}')` }}></div>
+                    <div className="w-full h-[38vw] max-h-32 md:h-[22rem] md:max-h-[22rem] bg-cover bg-center rounded mb-4" style={{ backgroundImage: `url('${service.image}')` }}></div>
                     <h1 className="font-daysOne text-lg md:text-xl text-red-500 mb-2 text-center">{service.title}</h1>
                     <p className="font-dmSans text-xs md:text-base text-black text-center">{service.description}</p>
                   </div>
