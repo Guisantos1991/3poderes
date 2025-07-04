@@ -2,6 +2,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import Separator from "../assets/icons/separator-carsblue.svg?react";
 
+//Componentes
+
+
 const services = [
   {
     image: "/images/services6.png",
