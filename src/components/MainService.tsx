@@ -41,12 +41,11 @@ export default function MainService() {
               </div>
               <div className="flex flex-col items-start justify-center w-full gap-2">
                 <h1 className="font-daysOne text-base md:text-lg text-black">
-                  Com uma equipe qualificada, comprometida e experiente!
+                Equipe experiente, diagnóstico rápido e serviço sem enrolação.
                 </h1>
                 <p className="font-dmSans text-xs md:text-sm text-black">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, quos lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Quisquam, quos.
+                Na 3 Poderes, você é atendido por quem entende do assunto e fala a verdade.
+                Aqui, o que precisa ser feito é explicado com clareza — e só é feito o necessário.
                 </p>
                 <div className="flex flex-row items-center justify-start w-full h-4 gap-1 mt-3">
                   <Disc className="w-3 h-3" />
@@ -57,19 +56,19 @@ export default function MainService() {
                 <div className="flex flex-row items-center justify-start w-full h-4 gap-1">
                   <Disc className="w-3 h-3" />
                   <p className="font-dmSans text-xs md:text-sm text-black">
-                    Equipamentos de alta qualidade.
+                  Estrutura completa e moderna.
                   </p>
                 </div>
                 <div className="flex flex-row items-center justify-start w-full h-4 gap-1">
                   <Disc className="w-3 h-3" />
                   <p className="font-dmSans text-xs md:text-sm text-black">
-                    Peças e acessórios.
+                    Equipe técnica especializada.
                   </p>
                 </div>
                 <div className="flex flex-row items-center justify-start w-full h-4 gap-1">
                   <Disc className="w-3 h-3" />
                   <p className="font-dmSans text-xs md:text-sm text-black">
-                    Prazo diferenciado.
+                    Atendimento com hora marcada.
                   </p>
                 </div>
               </div>

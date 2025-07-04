@@ -19,7 +19,10 @@ export default function Contact() {
       style={{ y, opacity }}
       className="flex flex-col items-start justify-center w-full min-h-[600px] md:h-180 p-4 md:p-8"
     >
-      <div className="flex flex-col md:flex-row items-center justify-center w-full md:w-3/4 h-full gap-8 md:gap-0 relative" id="Contact">
+      <div
+        className="flex flex-col md:flex-row items-center justify-center w-full md:w-3/4 h-full gap-8 md:gap-0 relative"
+        id="Contact"
+      >
         <div
           className="flex flex-col items-center justify-center w-full md:w-5/6 h-full relative bg-cover bg-no-repeat rounded-lg shadow-md"
           style={{
@@ -35,18 +38,19 @@ export default function Contact() {
             <div className="flex flex-row items-center justify-start w-full h-8 gap-2">
               <Separator />
               <h1 className="text-black font-daysOne font-bold text-xs sm:text-base md:text-lg w-full break-words leading-tight">
-                Agende seu serviço!
+                Pronto para resolver o problema do seu carro?
               </h1>
             </div>
-            <div className="flex flex-row items-center justify-start w-full h-auto md:w-160 md:h-16">
-              <h1 className="text-black font-daysOne font-bold text-xs sm:text-lg md:text-lg w-full break-words leading-tight">
-                Com trabalho sério, qualidade e compromisso! Nós vamos te ajudar a manter seu carro em dia!
-              </h1>
-            </div>
+
             <p className="font-dmSans w-full md:w-120 text-xs sm:text-sm md:text-base break-words leading-tight">
-              Com duas unidades, estamos prontos para receber você, com maior conforto! Não perca tempo, venha nos visitar e faça seu orçamento!
+              Então você está no lugar certo. A 3 Poderes tem duas unidades em
+              Uberlândia, atendimento rápido e orçamento sem compromisso. Clique
+              abaixo e agende agora sua avaliação — é rápido e sem compromisso!
             </p>
-            <div className="flex flex-col items-start justify-start w-full h-full mt-6 md:mt-10 gap-2 md:gap-2">
+            <div className="flex flex-col items-start justify-start w-full h-full mt-6 md:mt-10 gap-2 md:gap-2 ">
+              <h1 className="text-black font-daysOne font-bold text-xs sm:text-sm md:text-lg break-words w-full uppercase">
+                Unidade Canaã
+              </h1>
               <a
                 href="https://www.google.com/maps/place/Av.+Babel,+121"
                 target="_blank"
@@ -56,6 +60,7 @@ export default function Contact() {
                 <span className="flex items-center justify-center w-8 h-8 bg-red-500 rounded-full">
                   <LocationIcon className="w-5 h-5 text-white" />
                 </span>
+
                 <span className="text-black font-daysOne font-bold text-xs sm:text-sm md:text-lg break-words w-full">
                   Avenida Babel, 121, Jardim Canaã - Uberlândia/MG
                 </span>
@@ -71,11 +76,16 @@ export default function Contact() {
                   (34) 99644-1060
                 </span>
               </a>
+              <br />
+              <br />
+              <h1 className="text-black font-daysOne font-bold text-xs sm:text-sm md:text-lg break-words w-full uppercase">
+                Unidade Chácaras Tubalina
+              </h1>
               <a
                 href="https://www.google.com/maps/place/Av.+Dimas+Machado,+60"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col sm:flex-row items-start sm:items-center gap-2 hover:underline mt-4 md:mt-10 w-full"
+                className="flex flex-col sm:flex-row items-start sm:items-center gap-2 hover:underline w-full"
               >
                 <span className="flex items-center justify-center w-8 h-8 bg-red-500 rounded-full">
                   <LocationIcon className="w-5 h-5 text-white" />

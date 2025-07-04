@@ -36,7 +36,7 @@ export default function AboutUs() {
         <div className="flex flex-col w-full md:w-120 h-20 md:h-24 px-2 md:px-4 gap-1 md:gap-2">
           <div className="flex flex-row items-center justify-start gap-2">
             <Separator className="w-5 h-5 md:w-6 md:h-6" />
-            <h1 className="text-sm md:text-base font-dmSans text-red-500">Comentários</h1>
+            <h1 className="text-sm md:text-base font-dmSans text-red-500">Depoimentos</h1>
           </div>
           <h1 className="text-lg md:text-2xl font-daysOne text-black">
             Veja aqui o que os clientes estão falando sobre nós!
