@@ -40,21 +40,12 @@ const services = [
 
 export default function MidSection() {
   const ref = useRef(null);
-  const servicesRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center center"],
   });
   const x = useTransform(scrollYProgress, [0, 1], [100, 0]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
-  // Efeito de scroll para midSectionServices
-  const { scrollYProgress: servicesScrollYProgress } = useScroll({
-    target: servicesRef,
-    offset: ["start end", "center center"],
-  });
-  const servicesY = useTransform(servicesScrollYProgress, [0, 1], [100, 0]);
-  const servicesOpacity = useTransform(servicesScrollYProgress, [0, 1], [0, 1]);
 
   // Carrossel
   const [current, setCurrent] = useState(0);

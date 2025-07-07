@@ -90,7 +90,7 @@ export default function MainService() {
                 loop
                 muted
                 playsInline
-                className="w-full h-[48vw] sm:h-[60vw] md:h-[48.4rem] object-cover rounded-lg"
+                className="w-full h-[52vw] sm:h-[60vw] md:h-[52.4rem] object-cover rounded-lg"
                 style={{ pointerEvents: "none" }}
               >
                 <source src="/videos/mainVideo.mp4" type="video/mp4" />
