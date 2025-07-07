@@ -79,7 +79,7 @@ export default function MidSection() {
             <img
               src="/images/headerBanner.jpeg"
               alt="Mid Section"
-              className="w-full md:w-3/4 h-48 md:h-full object-contain rounded-lg shadow-md mt-24"
+              className="w-full md:w-3/4 h-48 md:h-full object-contain rounded-lg shadow-md mt-48"
             />
           </motion.div>
         </div>
@@ -124,15 +124,20 @@ export default function MidSection() {
           </div>
         </motion.div>
       </div>
-      <motion.div
+      <div
         className="flex flex-col items-center justify-center w-full h-full md:h-144 p-2 md:p-6 pb-0 mb-0"
         id="midSectionServices"
-        ref={servicesRef}
-        style={{ y: servicesY, opacity: servicesOpacity }}
       >
         {/* Mobile: grid de cards */}
         <div className="w-full flex flex-col gap-4 md:hidden mt-24">
-          <h2 className="font-daysOne text-xl text-black mb-2">Nossos Serviços</h2>
+        <div className="flex flex-row items-center justify-center w-full h-6 gap-2 ml-6 mb-[-20px]">
+              <div className="flex flex-col items-center justify-center w-8 h-full">
+                <Separator className="w-6 h-4" />
+              </div>
+              <div className="flex items-center justify-start w-full h-full font-dmSans text-lg md:text-xl text-red-500">
+                <h1>Nossos Serviços</h1>
+              </div>
+            </div>
           <div className="grid grid-cols-1 gap-4">
             {services.map((service) => (
               <div key={service.title} className="flex flex-col w-full h-96 items-center justify-center bg-white rounded-lg shadow-md p-4">
@@ -197,7 +202,7 @@ export default function MidSection() {
               ))}
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

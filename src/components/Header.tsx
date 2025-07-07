@@ -91,7 +91,7 @@ export default function Header() {
             <img
               src="/images/mainLogo.png"
               alt="logo"
-              className="w-48 h-24 md:w-[360px] md:h-[190px] md:absolute md:right-10 md:bottom-[-40px]"
+              className="w-48 h-24 md:w-[360px] md:h-[190px] md:absolute md:right-10 md:bottom-[-40px] mb-4"
             />
           </div>
         </div>
