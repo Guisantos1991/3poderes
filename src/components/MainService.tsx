@@ -22,7 +22,7 @@ export default function MainService() {
 
   return (
     <motion.div ref={ref} style={{ y }}>
-      <div className="flex flex-col items-center justify-center w-full min-h-[500px] md:h-176 p-0 md:p-8">
+      <div className="flex flex-col items-center justify-center w-full min-h-[500px] md:h-176 p-0 md:p-8 mt-24">
         <div className="flex w-full h-full flex-col md:flex-row justify-center md:justify-end items-center">
           <div
             className="flex flex-col items-center justify-center w-full md:w-4/5 h-full relative"

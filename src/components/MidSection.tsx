@@ -146,9 +146,16 @@ export default function MidSection() {
           </div>
         </div>
         {/* Desktop: carrossel */}
-        <div className="w-full h-full flex-col items-center hidden md:flex">
+        <div className="w-full h-full flex-col items-center hidden md:flex mt-40 mb-20">
           <div className="flex flex-row items-center justify-between w-full mb-4">
-            <h2 className="font-daysOne text-3xl text-black">Nossos Serviços</h2>
+          <div className="flex flex-row items-center justify-center w-full h-6 gap-2 ml-6">
+              <div className="flex flex-col items-center justify-center w-8 h-full">
+                <Separator className="w-6 h-4" />
+              </div>
+              <div className="flex items-center justify-start w-full h-full font-dmSans text-lg md:text-xl text-red-500">
+                <h1>Nossos Serviços</h1>
+              </div>
+            </div>
             <div className="flex gap-2">
               <button onClick={() => setCurrent((prev) => Math.max(prev - 1, 0))} disabled={current === 0} className="p-2 bg-gray-200 rounded disabled:opacity-50">&#8592;</button>
               <button onClick={() => setCurrent((prev) => Math.min(prev + 1, maxIndex))} disabled={current >= maxIndex} className="p-2 bg-gray-200 rounded disabled:opacity-50">&#8594;</button>
