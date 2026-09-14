@@ -1,0 +1,58 @@
+<footer class="main-footer">
+  <div class="container footer-container">
+    <!-- Coluna 1: Marca & Resumo -->
+    <div class="footer-col brand-col">
+      <img [src]="company.mainLogo" alt="3 Poderes Centro Automotivo" width="160" height="84" class="footer-logo" />
+      <p class="brand-desc">
+        Oficina mecânica de confiança em Uberlândia com atendimento sério, transparente e focado em resolver seu problema sem enrolação.
+      </p>
+    </div>
+
+    <!-- Coluna 2: Unidade Canaã -->
+    <div class="footer-col">
+      <h4 class="col-title">Unidade Canaã</h4>
+      <p class="col-text">{{ company.branches[0].address }}</p>
+      <p class="col-text">{{ company.branches[0].neighborhood }} - {{ company.branches[0].cityState }}</p>
+      <a [href]="company.branches[0].whatsappUrl" target="_blank" rel="noopener noreferrer" class="col-link">
+        {{ company.branches[0].phoneDisplay }}
+      </a>
+      <p class="col-hours">{{ company.branches[0].hours }}</p>
+    </div>
+
+    <!-- Coluna 3: Unidade Tubalina -->
+    <div class="footer-col">
+      <h4 class="col-title">Unidade Tubalina</h4>
+      <p class="col-text">{{ company.branches[1].address }}</p>
+      <p class="col-text">{{ company.branches[1].neighborhood }} - {{ company.branches[1].cityState }}</p>
+      <a [href]="company.branches[1].whatsappUrl" target="_blank" rel="noopener noreferrer" class="col-link">
+        {{ company.branches[1].phoneDisplay }}
+      </a>
+      <p class="col-hours">{{ company.branches[1].hours }}</p>
+    </div>
+
+    <!-- Coluna 4: Links Rápidos -->
+    <div class="footer-col links-col">
+      <h4 class="col-title">Links Rápidos</h4>
+      <ul class="quick-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#sobre">O que Fazemos</a></li>
+        <li><a href="#servicos">Nossos Serviços</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#unidades">Onde Estamos</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Barra de Copyright -->
+  <div class="footer-bottom">
+    <div class="container bottom-container">
+      <p class="copyright-text">
+        &copy; {{ currentYear }} <strong>{{ company.name }}</strong> • Todos os direitos reservados.
+      </p>
+      <p class="location-text">
+        Uberlândia / MG • Oficina Mecânica de Confiança
+      </p>
+    </div>
+  </div>
+</footer>

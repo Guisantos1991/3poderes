@@ -1,0 +1,45 @@
+<section id="diferenciais" class="highlights-section">
+  <div class="container">
+    <div class="highlights-grid">
+      @for (item of items; track item.id) {
+        <div
+          class="highlight-card"
+          [class.active]="activeIndex() === item.id"
+          (click)="setActive(item.id)"
+          role="button"
+          tabindex="0"
+          [attr.aria-label]="item.title"
+        >
+          <!-- Barra de Destaque Superior -->
+          <div class="card-indicator"></div>
+
+          <div class="card-icon">
+            @switch (item.icon) {
+              @case ('best-price') {
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              }
+              @case ('guarantee') {
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+              }
+              @case ('certified') {
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              }
+            }
+          </div>
+
+          <div class="card-content">
+            <h3 class="card-title">{{ item.title }}</h3>
+            <p class="card-desc">{{ item.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

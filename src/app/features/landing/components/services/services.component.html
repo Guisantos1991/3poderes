@@ -1,0 +1,129 @@
+<section id="servicos" class="services-section section-wrapper">
+  <div class="container">
+    <div class="services-header-row">
+      <app-section-header
+        badge="Nossos Serviços"
+        title="Soluções completas para cuidar do seu veículo"
+        subtitle="Da manutenção preventiva e troca de óleo até reparos complexos de motor, freios e suspensão."
+        align="left"
+      ></app-section-header>
+
+      <!-- Controles do Carrossel Desktop -->
+      <div class="carousel-controls desktop-only">
+        <button
+          class="control-btn"
+          (click)="prevSlide()"
+          aria-label="Serviço anterior"
+          title="Serviço anterior"
+        >
+          ←
+        </button>
+        <button
+          class="control-btn"
+          (click)="nextSlide()"
+          aria-label="Próximo serviço"
+          title="Próximo serviço"
+        >
+          →
+        </button>
+      </div>
+    </div>
+
+    <!-- Viewport Desktop: Largura Total com Auto-play e Pausa no Hover -->
+    <div
+      class="carousel-viewport desktop-only"
+      (mouseenter)="stopAutoPlay()"
+      (mouseleave)="startAutoPlay()"
+    >
+      <div
+        class="carousel-track"
+        [style.transform]="trackTransform()"
+      >
+        @for (service of services; track service.id) {
+          <div class="carousel-slide">
+            <div class="service-card">
+              <!-- Mídia Ampliada em Grande Destaque -->
+              <div class="card-media">
+                <img
+                  [src]="service.image"
+                  [alt]="service.title"
+                  class="service-img"
+                  loading="lazy"
+                />
+                @if (service.badge) {
+                  <span class="service-badge">{{ service.badge }}</span>
+                }
+              </div>
+
+              <!-- Conteúdo com Mais Espaço Horizontal -->
+              <div class="card-body">
+                <h3 class="service-title">{{ service.title }}</h3>
+                <p class="service-desc">{{ service.description }}</p>
+
+                <a
+                  [href]="getServiceWhatsappUrl(service.title)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="service-cta"
+                >
+                  <span>Agendar este serviço</span>
+                  <span class="cta-arrow">➔</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Indicadores de Pontos (Dots) com Seleção Direta -->
+    <div class="carousel-dots desktop-only">
+      @for (item of [].constructor(maxSlide() + 1); track $index) {
+        <button
+          class="dot"
+          [class.active]="currentSlide() === $index"
+          (click)="goToSlide($index)"
+          [attr.aria-label]="'Ir para slide ' + ($index + 1)"
+        ></button>
+      }
+    </div>
+
+    <!-- Versão Mobile: Carrossel Horizontal Fluido com Scroll Snap -->
+    <div class="mobile-snap-track mobile-only">
+      @for (service of services; track service.id) {
+        <div class="mobile-snap-slide">
+          <div class="service-card">
+            <div class="card-media">
+              <img
+                [src]="service.image"
+                [alt]="service.title"
+                class="service-img"
+                loading="lazy"
+              />
+              @if (service.badge) {
+                <span class="service-badge">{{ service.badge }}</span>
+              }
+            </div>
+            <div class="card-body">
+              <h3 class="service-title">{{ service.title }}</h3>
+              <p class="service-desc">{{ service.description }}</p>
+              <a
+                [href]="getServiceWhatsappUrl(service.title)"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="service-cta"
+              >
+                <span>Agendar serviço</span>
+                <span class="cta-arrow">➔</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="mobile-hint mobile-only">
+      <span>← Deslize para ver todos os serviços →</span>
+    </div>
+  </div>
+</section>

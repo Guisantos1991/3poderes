@@ -1,0 +1,179 @@
+@use 'styles/variables' as *;
+@use 'styles/mixins' as *;
+
+.hero {
+  position: relative;
+  background-image: url('/images/hdBanner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: $space-10;
+  padding-bottom: $space-16;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+
+  @include custom-screen($bp-tablet) {
+    padding-top: $space-16;
+    padding-bottom: 7.5rem;
+    min-height: 660px;
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba($color-dark, 0.92) 0%,
+    rgba($color-dark, 0.82) 55%,
+    rgba($color-primary-dark, 0.70) 100%
+  );
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-8;
+  align-items: center;
+
+  @include custom-screen($bp-desktop) {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: $space-12;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  text-align: left;
+}
+
+.hero-title {
+  font-family: $font-family-title;
+  font-size: $font-size-hero;
+  color: $color-white;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle-box {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  background-color: rgba(45, 55, 72, 0.65);
+  backdrop-filter: blur(8px);
+  padding: $space-4 $space-5;
+  border-radius: $radius-lg;
+  border-left: 5px solid $color-secondary;
+  max-width: 680px;
+
+  .hero-subtitle-text {
+    font-size: $font-size-lead;
+    color: rgba($color-white, 0.95);
+    line-height: 1.5;
+  }
+
+  .hero-locations-tag {
+    font-size: $font-size-small;
+    color: $color-secondary;
+    font-weight: 500;
+
+    strong {
+      color: $color-white;
+    }
+  }
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  margin-top: $space-3;
+
+  @include custom-screen($bp-mobile) {
+    flex-direction: row;
+    gap: $space-4;
+  }
+
+  .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-2;
+    padding: 1rem 1.75rem;
+    border-radius: $radius-md;
+    font-family: $font-family-title;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    transition: transform $transition-fast, box-shadow $transition-fast, background-color $transition-fast;
+    white-space: nowrap;
+
+    svg {
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    // Botão Amarelo Oficial (Canaã)
+    &.btn-cta-yellow {
+      background-color: #FFF212;
+      color: #000000;
+      box-shadow: 0 4px 15px rgba(255, 242, 18, 0.4);
+
+      &:hover {
+        background-color: #f5e700;
+        box-shadow: 0 6px 20px rgba(255, 242, 18, 0.55);
+      }
+    }
+
+    // Botão Vermelho Oficial (Tubalina)
+    &.btn-cta-red {
+      background-color: #FF0000;
+      color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.45);
+
+      &:hover {
+        background-color: #e60000;
+        box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
+      }
+    }
+  }
+}
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-4;
+
+  .hero-logo-big {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.55));
+    transition: transform $transition-slow;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    @include custom-screen($bp-desktop) {
+      max-width: 480px;
+    }
+  }
+}

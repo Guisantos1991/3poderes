@@ -1,0 +1,53 @@
+<section id="inicio" class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-container">
+    <div class="hero-content">
+      <!-- Título Principal -->
+      <h1 class="hero-title">
+        Sua oficina mecânica de confiança em Uberlândia
+      </h1>
+
+      <!-- Subtítulo em Caixa de Destaque -->
+      <div class="hero-subtitle-box">
+        <p class="hero-subtitle-text">
+          Na 3 Poderes, seu carro é tratado com seriedade, transparência e qualidade real. 
+          Sem empurrar serviço, sem enrolação!
+        </p>
+        <div class="hero-locations-tag">
+          📍 Duas unidades: <strong>Canaã</strong> e <strong>Chácaras Tubalina</strong>.
+        </div>
+      </div>
+
+      <!-- Botões de Agendamento: Um Amarelo e Outro Vermelho -->
+      <div class="hero-actions">
+        <!-- CTA Canaã (Amarelo) -->
+        <a [href]="company.branches[0].whatsappUrl" target="_blank" rel="noopener noreferrer" class="hero-btn btn-cta-yellow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.072-1.847-.43-1.442-.596-2.355-2.067-2.427-2.164-.07-.098-.578-.77-.578-1.469 0-.699.366-1.042.496-1.185.13-.144.283-.179.378-.179.096 0 .192.002.276.006.09.004.21-.035.328.25.12.288.414 1.01.45 1.082.036.072.06.156.012.252-.048.096-.072.156-.144.24-.072.084-.15.187-.215.251-.072.072-.148.15-.064.294.084.144.372.613.798.992.548.488 1.01.639 1.154.71.144.072.228.06.312-.036.084-.096.36-.419.456-.563.096-.144.192-.12.324-.072.132.048.837.395.98.467.144.072.24.108.276.168.036.06.036.348-.108.753z"/>
+          </svg>
+          <span>Agendar Canaã</span>
+        </a>
+
+        <!-- CTA Tubalina (Vermelho) -->
+        <a [href]="company.branches[1].whatsappUrl" target="_blank" rel="noopener noreferrer" class="hero-btn btn-cta-red">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.072-1.847-.43-1.442-.596-2.355-2.067-2.427-2.164-.07-.098-.578-.77-.578-1.469 0-.699.366-1.042.496-1.185.13-.144.283-.179.378-.179.096 0 .192.002.276.006.09.004.21-.035.328.25.12.288.414 1.01.45 1.082.036.072.06.156.012.252-.048.096-.072.156-.144.24-.072.084-.15.187-.215.251-.072.072-.148.15-.064.294.084.144.372.613.798.992.548.488 1.01.639 1.154.71.144.072.228.06.312-.036.084-.096.36-.419.456-.563.096-.144.192-.12.324-.072.132.048.837.395.98.467.144.072.24.108.276.168.036.06.036.348-.108.753z"/>
+          </svg>
+          <span>Agendar Chácaras Tubalina</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Logomarca Oficial em Grande Destaque (Sem frases ou estrelas de IA) -->
+    <div class="hero-visual">
+      <img
+        [src]="company.mainLogo"
+        alt="Logotipo 3 Poderes Centro Automotivo"
+        width="460"
+        height="242"
+        class="hero-logo-big"
+      />
+    </div>
+  </div>
+</section>

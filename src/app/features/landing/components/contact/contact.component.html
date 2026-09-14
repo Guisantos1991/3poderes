@@ -1,0 +1,85 @@
+<section id="unidades" class="contact-section section-wrapper">
+  <div class="container">
+    <app-section-header
+      badge="Onde Estamos"
+      title="Pronto para resolver o problema do seu carro?"
+      subtitle="Escolha a unidade mais perto de você em Uberlândia e agende sua avaliação sem compromisso."
+    ></app-section-header>
+
+    <!-- Grid Simétrico de 2 Unidades (Zero Overflow) -->
+    <div class="units-grid">
+      @for (branch of company.branches; track branch.id) {
+        <div class="unit-card" [class.highlight-card]="branch.id === 'canaa'">
+          <div class="card-header">
+            <div class="unit-badge">{{ branch.badge }}</div>
+            <h3 class="unit-title">{{ branch.name }}</h3>
+          </div>
+
+          <div class="card-details">
+            <!-- Endereço com Link para Maps -->
+            <a [href]="branch.mapsUrl" target="_blank" rel="noopener noreferrer" class="detail-row link-row">
+              <span class="detail-icon map-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </span>
+              <div class="detail-text">
+                <span class="detail-label">Endereço</span>
+                <span class="detail-value">{{ branch.address }}, {{ branch.neighborhood }}</span>
+                <span class="detail-sub">{{ branch.cityState }} • <u>Abrir no Google Maps</u></span>
+              </div>
+            </a>
+
+            <!-- Telefone e WhatsApp -->
+            <a [href]="branch.whatsappUrl" target="_blank" rel="noopener noreferrer" class="detail-row link-row">
+              <span class="detail-icon phone-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </span>
+              <div class="detail-text">
+                <span class="detail-label">WhatsApp / Telefone</span>
+                <span class="detail-value">{{ branch.phoneDisplay }}</span>
+                <span class="detail-sub">Atendimento rápido e orçamento</span>
+              </div>
+            </a>
+
+            <!-- Horário de Atendimento -->
+            <div class="detail-row">
+              <span class="detail-icon clock-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </span>
+              <div class="detail-text">
+                <span class="detail-label">Horário de Funcionamento</span>
+                <span class="detail-value">{{ branch.hours }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ação Direta -->
+          <div class="card-action">
+            <a [href]="branch.whatsappUrl" target="_blank" rel="noopener noreferrer" [class]="branch.id === 'canaa' ? 'btn btn-secondary btn-full' : 'btn btn-primary btn-full'">
+              <span>Agendar no WhatsApp • {{ branch.name }}</span>
+              <span class="arrow">➔</span>
+            </a>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- Banner Inferior de Confiança -->
+    <div class="contact-trust-banner">
+      <div class="trust-content">
+        <h4 class="trust-title">Atendimento com Hora Marcada ou Orçamento Imediato</h4>
+        <p class="trust-desc">Se preferir, venha direto a uma das nossas oficinas mecânicas em Uberlândia. Avaliamos seu veículo na hora!</p>
+      </div>
+      <a [href]="company.branches[0].whatsappUrl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+        Tirar Dúvida Agora
+      </a>
+    </div>
+  </div>
+</section>

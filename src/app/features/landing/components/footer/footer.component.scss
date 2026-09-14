@@ -1,0 +1,136 @@
+@use 'styles/variables' as *;
+@use 'styles/mixins' as *;
+
+.main-footer {
+  background-color: $color-dark;
+  color: rgba($color-white, 0.85);
+  padding-top: $space-12;
+  border-top: 4px solid $color-primary;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-8;
+  padding-bottom: $space-12;
+
+  @include custom-screen($bp-mobile) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include custom-screen($bp-desktop) {
+    grid-template-columns: 1.4fr 1fr 1fr 0.8fr;
+    gap: $space-10;
+  }
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+
+  .col-title {
+    font-family: $font-family-title;
+    font-size: 1.05rem;
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: $space-2;
+    position: relative;
+    padding-bottom: $space-2;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      background-color: $color-secondary;
+    }
+  }
+
+  .col-text {
+    font-size: $font-size-small;
+    color: rgba($color-white, 0.75);
+    line-height: 1.5;
+  }
+
+  .col-link {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $color-secondary;
+    margin-top: 4px;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  .col-hours {
+    font-size: $font-size-xs;
+    color: rgba($color-white, 0.6);
+    margin-top: 6px;
+  }
+}
+
+.brand-col {
+  .footer-logo {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: $space-2;
+  }
+
+  .brand-desc {
+    font-size: $font-size-small;
+    color: rgba($color-white, 0.75);
+    line-height: 1.6;
+    max-width: 320px;
+  }
+}
+
+.links-col {
+  .quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+
+    li a {
+      font-size: $font-size-small;
+      color: rgba($color-white, 0.75);
+      transition: all $transition-fast;
+
+      &:hover {
+        color: $color-secondary;
+        padding-left: 4px;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  background-color: #0d1014;
+  border-top: 1px solid rgba($color-white, 0.08);
+  padding: $space-5 0;
+
+  .bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-2;
+    text-align: center;
+    font-size: $font-size-xs;
+    color: rgba($color-white, 0.6);
+
+    @include custom-screen($bp-tablet) {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    strong {
+      color: $color-white;
+    }
+  }
+}

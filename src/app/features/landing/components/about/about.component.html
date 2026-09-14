@@ -1,0 +1,48 @@
+<section id="sobre" class="about-section section-wrapper">
+  <div class="container about-grid">
+    <!-- Coluna Visual / Imagem -->
+    <div class="about-visual">
+      <div class="image-wrapper">
+        <img [src]="company.aboutBanner" alt="Estrutura e equipe da 3 Poderes Centro Automotivo" width="600" height="450" class="about-img" />
+        <div class="experience-card">
+          <span class="exp-number">100%</span>
+          <span class="exp-text">Foco na Satisfação e Segurança do Cliente</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coluna de Texto e Benefícios -->
+    <div class="about-content">
+      <app-section-header
+        badge="O que fazemos?"
+        title="A melhor oficina mecânica para cuidar do seu veículo"
+        align="left"
+      ></app-section-header>
+
+      <p class="about-text">
+        Com anos de atuação no setor automotivo, a <strong>3 Poderes</strong> se tornou referência em Uberlândia por oferecer um serviço confiável, justo e de excelência técnica.
+      </p>
+
+      <p class="about-text">
+        Nossa equipe é formada por especialistas que entendem a fundo o funcionamento do seu carro e estão prontos para resolver seu problema com agilidade. <strong>Aqui a gente não inventa problema: a gente resolve.</strong> É por isso que quem vem uma vez, vira cliente fiel.
+      </p>
+
+      <!-- Checklist de Benefícios -->
+      <ul class="benefits-list">
+        @for (benefit of benefits; track benefit) {
+          <li class="benefit-item">
+            <span class="check-icon">✓</span>
+            <span>{{ benefit }}</span>
+          </li>
+        }
+      </ul>
+
+      <!-- CTA -->
+      <div class="about-cta">
+        <a [href]="company.branches[0].whatsappUrl" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Falar com um Especialista
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

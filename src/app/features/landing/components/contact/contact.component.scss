@@ -1,0 +1,211 @@
+@use 'styles/variables' as *;
+@use 'styles/mixins' as *;
+
+.contact-section {
+  background-color: $color-white;
+}
+
+.units-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-6;
+  margin-bottom: $space-8;
+
+  @include custom-screen($bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-8;
+  }
+}
+
+.unit-card {
+  display: flex;
+  flex-direction: column;
+  padding: $space-6;
+  background-color: $color-white;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-lg;
+  border: 2px solid $color-gray-200;
+  transition: all $transition-base;
+
+  @include custom-screen($bp-tablet) {
+    padding: $space-8;
+  }
+
+  &.highlight-card {
+    border-color: rgba($color-primary, 0.4);
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba($color-primary-light, 0.25) 100%);
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl;
+    border-color: $color-primary;
+  }
+
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    margin-bottom: $space-6;
+    padding-bottom: $space-4;
+    border-bottom: 1px solid $color-gray-200;
+
+    .unit-badge {
+      display: inline-block;
+      width: fit-content;
+      padding: 4px 12px;
+      border-radius: $radius-full;
+      background-color: $color-secondary;
+      color: $color-dark;
+      font-size: $font-size-xs;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .unit-title {
+      font-family: $font-family-title;
+      font-size: 1.35rem;
+      color: $color-dark;
+      text-transform: uppercase;
+    }
+  }
+
+  .card-details {
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+    flex: 1;
+    margin-bottom: $space-6;
+
+    .detail-row {
+      display: flex;
+      align-items: flex-start;
+      gap: $space-4;
+      color: $color-gray-800;
+
+      &.link-row {
+        cursor: pointer;
+        padding: $space-2;
+        border-radius: $radius-md;
+        margin: -$space-2;
+        transition: background-color $transition-fast;
+
+        &:hover {
+          background-color: rgba($color-primary, 0.05);
+
+          .detail-icon {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .detail-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: $radius-md;
+        flex-shrink: 0;
+        transition: transform $transition-fast;
+
+        &.map-icon {
+          background-color: rgba($color-primary, 0.12);
+          color: $color-primary;
+        }
+
+        &.phone-icon {
+          background-color: rgba($color-whatsapp, 0.15);
+          color: $color-whatsapp-dark;
+        }
+
+        &.clock-icon {
+          background-color: rgba($color-gray-700, 0.1);
+          color: $color-gray-700;
+        }
+      }
+
+      .detail-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        .detail-label {
+          font-size: $font-size-xs;
+          font-weight: 700;
+          color: $color-gray-600;
+          text-transform: uppercase;
+        }
+
+        .detail-value {
+          font-size: 1rem;
+          font-weight: 600;
+          color: $color-dark;
+        }
+
+        .detail-sub {
+          font-size: $font-size-xs;
+          color: $color-gray-600;
+
+          u {
+            color: $color-primary;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .card-action {
+    .btn {
+      padding: 0.9rem;
+      font-size: 0.9rem;
+
+      .arrow {
+        transition: transform $transition-fast;
+      }
+
+      &:hover .arrow {
+        transform: translateX(4px);
+      }
+    }
+  }
+}
+
+.contact-trust-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-4;
+  padding: $space-6;
+  background-color: $color-dark;
+  color: $color-white;
+  border-radius: $radius-xl;
+  border-left: 6px solid $color-secondary;
+  text-align: center;
+
+  @include custom-screen($bp-tablet) {
+    flex-direction: row;
+    padding: $space-6 $space-8;
+    text-align: left;
+  }
+
+  .trust-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .trust-title {
+      font-family: $font-family-title;
+      font-size: 1.15rem;
+      color: $color-white;
+      text-transform: uppercase;
+    }
+
+    .trust-desc {
+      font-size: $font-size-small;
+      color: rgba($color-white, 0.85);
+    }
+  }
+}

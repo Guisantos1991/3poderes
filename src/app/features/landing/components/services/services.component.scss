@@ -1,0 +1,256 @@
+@use 'styles/variables' as *;
+@use 'styles/mixins' as *;
+
+.services-section {
+  background-color: $color-gray-100;
+  overflow: hidden;
+}
+
+.services-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: $space-6;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: $space-3;
+  margin-bottom: $space-8;
+
+  .control-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: $radius-full;
+    background-color: $color-white;
+    color: $color-dark;
+    box-shadow: $shadow-sm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: all $transition-fast;
+    border: 2px solid $color-gray-200;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+      border-color: $color-primary;
+      transform: scale(1.08);
+      box-shadow: $shadow-md;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+// --- Desktop Viewport de Largura Ampla ---
+.carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+  border-radius: $radius-xl;
+  padding: $space-2 0 $space-4 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 550ms cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  // Exatamente 3 cards ocupando 100% da viewport com o gap de 24px
+  flex: 0 0 calc((100% - 48px) / 3);
+  min-width: calc((100% - 48px) / 3);
+  max-width: calc((100% - 48px) / 3);
+  box-sizing: border-box;
+}
+
+// --- Card de Serviço Aumentado na Horizontal ---
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  min-height: 520px;
+  border: 1px solid $color-gray-200;
+  transition: transform $transition-base, box-shadow $transition-base, border-color $transition-base;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-xl;
+    border-color: rgba($color-primary, 0.4);
+
+    .card-media .service-img {
+      transform: scale(1.06);
+    }
+  }
+
+  // Foto Ampliada com Alta Nitidez
+  .card-media {
+    position: relative;
+    width: 100%;
+    height: 260px; // Ampliado para maior presença visual
+    background-color: $color-gray-200;
+    overflow: hidden;
+
+    .service-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $transition-slow;
+    }
+
+    .service-badge {
+      position: absolute;
+      top: $space-3;
+      right: $space-3;
+      background-color: #FFF212;
+      color: #000000;
+      font-size: $font-size-xs;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: $radius-full;
+      box-shadow: $shadow-md;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: $space-6;
+    flex: 1;
+
+    .service-title {
+      font-family: $font-family-title;
+      font-size: 1.25rem;
+      color: $color-primary;
+      margin-bottom: $space-3;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .service-desc {
+      font-size: $font-size-body;
+      color: $color-gray-700;
+      line-height: 1.6;
+      margin-bottom: $space-6;
+      flex: 1;
+    }
+
+    .service-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $color-dark;
+      font-weight: 700;
+      font-size: $font-size-small;
+      padding-top: $space-4;
+      border-top: 1px solid $color-gray-200;
+      transition: color $transition-fast;
+
+      .cta-arrow {
+        color: $color-primary;
+        font-size: 1.1rem;
+        transition: transform $transition-fast;
+      }
+
+      &:hover {
+        color: $color-primary;
+
+        .cta-arrow {
+          transform: translateX(6px);
+        }
+      }
+    }
+  }
+}
+
+// --- Dots de Navegação ---
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: $space-2;
+  margin-top: $space-8;
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: $radius-full;
+    background-color: $color-gray-300;
+    transition: all $transition-fast;
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+
+    &.active {
+      width: 36px;
+      background-color: $color-primary;
+      box-shadow: 0 2px 8px rgba($color-primary, 0.4);
+    }
+  }
+}
+
+// --- Mobile Snap Track ---
+.mobile-snap-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: $space-4;
+  padding: $space-2 $space-1 $space-4 $space-1;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-snap-slide {
+    flex: 0 0 86%;
+    scroll-snap-align: center;
+
+    @include custom-screen($bp-mobile) {
+      flex: 0 0 52%;
+    }
+
+    .service-card {
+      min-height: 460px;
+
+      .card-media {
+        height: 230px;
+      }
+    }
+  }
+}
+
+.mobile-hint {
+  text-align: center;
+  font-size: $font-size-xs;
+  color: $color-gray-600;
+  margin-top: $space-3;
+}
+
+.desktop-only {
+  display: none;
+
+  @include custom-screen($bp-desktop) {
+    display: flex;
+  }
+}
+
+.mobile-only {
+  display: block;
+
+  @include custom-screen($bp-desktop) {
+    display: none;
+  }
+}

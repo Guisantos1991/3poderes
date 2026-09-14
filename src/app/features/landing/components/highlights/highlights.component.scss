@@ -1,0 +1,121 @@
+@use 'styles/variables' as *;
+@use 'styles/mixins' as *;
+
+.highlights-section {
+  position: relative;
+  z-index: 10;
+  margin-top: -$space-8;
+  padding-bottom: $space-8;
+
+  @include custom-screen($bp-tablet) {
+    margin-top: -$space-12;
+    padding-bottom: $space-12;
+  }
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-4;
+
+  @include custom-screen($bp-tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-6;
+  }
+}
+
+.highlight-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: $space-5;
+  padding: 1.75rem 2rem;
+  min-height: 140px;
+  background-color: $color-white;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-lg;
+  border: 2px solid $color-gray-200;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .card-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: transparent;
+    transition: background-color 400ms ease;
+  }
+
+  .card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: $radius-md;
+    background-color: rgba($color-primary, 0.1);
+    color: $color-primary;
+    flex-shrink: 0;
+    transition: all 450ms ease;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+  }
+
+  .card-title {
+    font-family: $font-family-title;
+    font-size: 1.05rem;
+    color: $color-dark;
+    text-transform: uppercase;
+    line-height: 1.25;
+    transition: color 400ms ease;
+  }
+
+  .card-desc {
+    font-size: $font-size-small;
+    color: $color-gray-600;
+    line-height: 1.5;
+    transition: color 400ms ease;
+  }
+
+  // --- Efeito Ativo (Destaque Vermelho Rotativo a Cada 5 Segundos) ---
+  &.active {
+    background: linear-gradient(135deg, #FF0000 0%, #B71C1C 100%);
+    border-color: #FF0000;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 14px 35px rgba(255, 0, 0, 0.45);
+
+    .card-indicator {
+      background-color: #FFF212; // Brilho amarelo no topo
+      box-shadow: 0 0 10px rgba(255, 242, 18, 0.8);
+    }
+
+    .card-icon {
+      background-color: rgba($color-white, 0.2);
+      color: #FFF212; // Ícone amarelo iluminado no fundo vermelho
+      transform: scale(1.1) rotate(4deg);
+    }
+
+    .card-title {
+      color: $color-white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-desc {
+      color: rgba($color-white, 0.95);
+    }
+  }
+
+  &:hover:not(.active) {
+    transform: translateY(-4px);
+    border-color: rgba($color-primary, 0.4);
+    box-shadow: $shadow-lg;
+  }
+}
