@@ -44,6 +44,8 @@
     line-height: 1.25;
     margin-bottom: $space-2;
     text-transform: uppercase;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .header-subtitle {
@@ -51,6 +53,8 @@
     color: $color-gray-600;
     max-width: 680px;
     line-height: 1.5;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   &.theme-dark {
