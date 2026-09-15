@@ -19,11 +19,16 @@
   display: flex;
   flex-direction: column;
   background-color: $color-white;
-  padding: $space-6;
-  border-radius: $radius-xl;
+  padding: $space-4;
+  border-radius: $radius-lg;
   box-shadow: $shadow-md;
   border: 1px solid $color-gray-200;
   transition: transform $transition-base, box-shadow $transition-base;
+
+  @include custom-screen($bp-tablet) {
+    padding: $space-6;
+    border-radius: $radius-xl;
+  }
 
   &:hover {
     transform: translateY(-4px);

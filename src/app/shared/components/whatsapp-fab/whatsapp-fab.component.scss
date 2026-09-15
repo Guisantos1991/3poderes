@@ -3,16 +3,21 @@
 
 .fab-wrapper {
   position: fixed;
-  bottom: $space-6;
-  right: $space-6;
+  bottom: $space-4;
+  right: $space-4;
   z-index: 1000;
+
+  @include custom-screen($bp-tablet) {
+    bottom: $space-6;
+    right: $space-6;
+  }
 }
 
 // --- Botão Flutuante Vibrante & Brilhante (WhatsApp Original) ---
 .fab-button {
   position: relative;
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   border-radius: $radius-full;
   background-color: $color-whatsapp;
   border: none;
@@ -22,6 +27,11 @@
   box-shadow: 0 6px 20px rgba($color-whatsapp, 0.55);
   cursor: pointer;
   transition: transform $transition-base, box-shadow $transition-base, background-color $transition-fast;
+
+  @include custom-screen($bp-tablet) {
+    width: 60px;
+    height: 60px;
+  }
 
   svg {
     transition: transform $transition-fast;
@@ -66,19 +76,30 @@
 
 // --- Popover Exclusivo nas Cores da Marca ---
 .fab-popover {
-  position: absolute;
-  bottom: 74px;
-  right: 0;
-  width: 340px;
-  max-width: calc(100vw - 32px);
+  position: fixed;
+  bottom: 84px;
+  left: $space-4;
+  right: $space-4;
+  width: auto;
+  max-width: none;
   background-color: $color-dark;
   border-radius: 8px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
-  padding: $space-5;
+  padding: $space-4;
   border: 2px solid $color-gray-700;
   border-top: 4px solid $color-primary;
   z-index: 999;
   animation: popIn 200ms ease-out;
+
+  @include custom-screen($bp-tablet) {
+    position: absolute;
+    bottom: 74px;
+    left: auto;
+    right: 0;
+    width: 340px;
+    max-width: calc(100vw - 32px);
+    padding: $space-5;
+  }
 
   .popover-header {
     display: flex;

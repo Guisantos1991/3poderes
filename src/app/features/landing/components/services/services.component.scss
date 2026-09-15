@@ -202,7 +202,7 @@
 
 // --- Mobile Snap Track ---
 .mobile-snap-track {
-  display: flex;
+  display: flex !important;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -215,18 +215,51 @@
   }
 
   .mobile-snap-slide {
-    flex: 0 0 86%;
+    flex: 0 0 85%;
+    min-width: 85%;
+    max-width: 85%;
     scroll-snap-align: center;
+    box-sizing: border-box;
+
+    @include custom-screen(480px) {
+      flex: 0 0 72%;
+      min-width: 72%;
+      max-width: 72%;
+    }
 
     @include custom-screen($bp-mobile) {
-      flex: 0 0 52%;
+      flex: 0 0 50%;
+      min-width: 50%;
+      max-width: 50%;
     }
 
     .service-card {
-      min-height: 460px;
+      min-height: auto;
+      height: 100%;
+      border-radius: $radius-lg;
 
       .card-media {
-        height: 230px;
+        height: 200px;
+      }
+
+      .card-body {
+        padding: $space-4;
+
+        .service-title {
+          font-size: 1.1rem;
+          margin-bottom: $space-2;
+        }
+
+        .service-desc {
+          font-size: 0.85rem;
+          margin-bottom: $space-4;
+          line-height: 1.5;
+        }
+
+        .service-cta {
+          padding-top: $space-3;
+          font-size: 0.8rem;
+        }
       }
     }
   }
@@ -236,14 +269,14 @@
   text-align: center;
   font-size: $font-size-xs;
   color: $color-gray-600;
-  margin-top: $space-3;
+  margin-top: $space-2;
 }
 
 .desktop-only {
-  display: none;
+  display: none !important;
 
   @include custom-screen($bp-desktop) {
-    display: flex;
+    display: flex !important;
   }
 }
 
@@ -251,6 +284,14 @@
   display: block;
 
   @include custom-screen($bp-desktop) {
-    display: none;
+    display: none !important;
+  }
+}
+
+div.mobile-snap-track.mobile-only {
+  display: flex !important;
+
+  @include custom-screen($bp-desktop) {
+    display: none !important;
   }
 }

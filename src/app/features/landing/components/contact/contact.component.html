@@ -55,7 +55,10 @@
               </span>
               <div class="detail-text">
                 <span class="detail-label">Horário de Funcionamento</span>
-                <span class="detail-value">{{ branch.hours }}</span>
+                <span class="detail-value">{{ branch.hoursWeekday || branch.hours }}</span>
+                @if (branch.hoursSaturday) {
+                  <span class="detail-sub">{{ branch.hoursSaturday }}</span>
+                }
               </div>
             </div>
           </div>

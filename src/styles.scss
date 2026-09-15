@@ -15,6 +15,9 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -23,7 +26,10 @@ body {
   color: $color-gray-900;
   background-color: $color-gray-50;
   line-height: 1.6;
-  overflow-x: hidden; // Previne qualquer risco de overflow horizontal global
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -71,15 +77,22 @@ ul, ol {
   align-items: center;
   justify-content: center;
   gap: $space-2;
-  padding: 0.85rem 1.5rem;
+  padding: 0.85rem 1.25rem;
   border-radius: $radius-md;
   font-family: $font-family-title;
   font-size: $font-size-small;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  text-align: center;
+  line-height: 1.35;
   transition: transform $transition-fast, box-shadow $transition-fast, background-color $transition-fast;
-  white-space: nowrap;
+  max-width: 100%;
+
+  @include custom-screen($bp-tablet) {
+    padding: 0.85rem 1.5rem;
+    white-space: nowrap;
+  }
 
   &:active {
     transform: scale(0.98);

@@ -10,4 +10,6 @@ export interface Branch {
   whatsappUrl: string;
   mapsUrl: string;
   hours: string;
+  hoursWeekday?: string;
+  hoursSaturday?: string;
 }

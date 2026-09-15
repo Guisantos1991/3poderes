@@ -28,17 +28,25 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: $space-5;
-  padding: 1.75rem 2rem;
-  min-height: 140px;
+  gap: $space-3;
+  padding: 1.15rem 1.25rem;
+  min-height: auto;
   background-color: $color-white;
-  border-radius: $radius-xl;
-  box-shadow: $shadow-lg;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
   border: 2px solid $color-gray-200;
   cursor: pointer;
   overflow: hidden;
   user-select: none;
   transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include custom-screen($bp-tablet) {
+    gap: $space-5;
+    padding: 1.75rem 2rem;
+    min-height: 140px;
+    border-radius: $radius-xl;
+    box-shadow: $shadow-lg;
+  }
 
   .card-indicator {
     position: absolute;
@@ -54,35 +62,50 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
+    width: 44px;
+    height: 44px;
     border-radius: $radius-md;
     background-color: rgba($color-primary, 0.1);
     color: $color-primary;
     flex-shrink: 0;
     transition: all 450ms ease;
+
+    @include custom-screen($bp-tablet) {
+      width: 56px;
+      height: 56px;
+    }
   }
 
   .card-content {
     display: flex;
     flex-direction: column;
     gap: $space-1;
+    min-width: 0; // Previne text overflow
   }
 
   .card-title {
     font-family: $font-family-title;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     color: $color-dark;
     text-transform: uppercase;
     line-height: 1.25;
     transition: color 400ms ease;
+
+    @include custom-screen($bp-tablet) {
+      font-size: 1.05rem;
+    }
   }
 
   .card-desc {
-    font-size: $font-size-small;
+    font-size: $font-size-xs;
     color: $color-gray-600;
-    line-height: 1.5;
+    line-height: 1.45;
     transition: color 400ms ease;
+
+    @include custom-screen($bp-tablet) {
+      font-size: $font-size-small;
+      line-height: 1.5;
+    }
   }
 
   // --- Efeito Ativo (Destaque Vermelho Rotativo a Cada 5 Segundos) ---

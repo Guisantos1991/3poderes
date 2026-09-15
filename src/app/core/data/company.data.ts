@@ -21,7 +21,9 @@ export const COMPANY_DATA = {
       phoneRaw: '5534996441060',
       whatsappUrl: 'https://wa.me/5534996441060?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20servi%C3%A7o%20na%20Unidade%20Cana%C3%A3.',
       mapsUrl: 'https://www.google.com/maps/place/Av.+Babel,+121+-+Jardim+Cana%C3%A3,+Uberl%C3%A2ndia+-+MG',
-      hours: 'Segunda a Sexta: 08:00 às 18:00 | Sábado: 08:00 às 12:00'
+      hours: 'Segunda a Sexta: 08:00 às 18:00 | Sábado: 08:00 às 12:00',
+      hoursWeekday: 'Segunda a Sexta: 08:00 às 18:00',
+      hoursSaturday: 'Sábado: 08:00 às 12:00'
     },
     {
       id: 'tubalina',
@@ -34,7 +36,9 @@ export const COMPANY_DATA = {
       phoneRaw: '5534999666729',
       whatsappUrl: 'https://wa.me/5534999666729?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20servi%C3%A7o%20na%20Unidade%20Tubalina.',
       mapsUrl: 'https://www.google.com/maps/place/Av.+Dimas+Machado,+60+-+Ch%C3%A1caras+Tubalina,+Uberl%C3%A2ndia+-+MG',
-      hours: 'Segunda a Sexta: 08:00 às 18:00 | Sábado: 08:00 às 12:00'
+      hours: 'Segunda a Sexta: 08:00 às 18:00 | Sábado: 08:00 às 12:00',
+      hoursWeekday: 'Segunda a Sexta: 08:00 às 18:00',
+      hoursSaturday: 'Sábado: 08:00 às 12:00'
     }
   ] as Branch[]
 };
